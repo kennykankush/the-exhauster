@@ -93,8 +93,9 @@ public class Exhauster {
 
         double totalTime = (endTimer - startTimer) / (long) 1000.0;
 
-        System.out.println("Total time taken is :" + totalTime + " seconds");
+        
         possiblePermutation(UniqueCheckerList.size(), charSeperator.length, set.size(), UniqueCheckerList, set);
+        System.out.println("Total time taken is :" + totalTime + " seconds");
 
     }
         
