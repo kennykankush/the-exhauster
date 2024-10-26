@@ -47,6 +47,8 @@ public class Exhauster {
         Random rand = new Random();
         Set<String> set = new HashSet<>();
 
+        long startTimer = System.currentTimeMillis();
+
         for (int i = 0; i < iteration; i++){
             // System.out.println("Entering outer loop");
             if (dynamicIndexList.isEmpty()){
@@ -87,7 +89,13 @@ public class Exhauster {
 
         }
 
+        long endTimer = System.currentTimeMillis();
+
+        double totalTime = (endTimer - startTimer) / (long) 1000.0;
+
+        System.out.println("Total time taken is :" + totalTime + " seconds");
         possiblePermutation(UniqueCheckerList.size(), charSeperator.length, set.size(), UniqueCheckerList, set);
+
     }
         
     public static int factorial(int n){
